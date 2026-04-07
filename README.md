@@ -158,6 +158,7 @@ Contains the main orchestration function, `run_quality_checks(df)`, which connec
 
 Contains the reusable dashboard visualization functions built on top of the quality-check output. It provides chart builders and summary components, such as KPI cards, heatmaps, scatter plots, bar charts, and acceptable-range charts, all designed to make the classifier results easier to inspect and interpret.
 *(This is the presentation and monitoring layer of the project.)*
+
 ---    
 
 ## Installation Guide
