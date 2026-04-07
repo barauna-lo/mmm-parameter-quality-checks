@@ -111,7 +111,7 @@ mmm-parameter-quality-checks/
 │       ├── exceptions.py
 │       ├── pipeline.py
 │       └── validation.py
-│       └── visualizations.py
+│       └── visualizations.py 
 │
 └── tests/
     ├── test_checks.py
