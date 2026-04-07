@@ -122,36 +122,41 @@ mmm-parameter-quality-checks/
 
 Below is a short description of what each source file does inside `src/mmm_quality_checks/`.
 
-### `__init__.py`
+##### `__init__.py`
 
 Exposes the main public functions of the package so they can be imported more easily by notebooks, scripts, or downstream systems.  
 *(In practice, it works as the package entry point.)*
 
-### `constants.py`
+##### `constants.py`
 
 Stores the reusable constants used across the project, such as required column names, numeric column names, thresholds, and output flag names.  
 *(This avoids hardcoding the same values in multiple files and makes maintenance easier.)*
 
-### `exceptions.py`
+##### `exceptions.py`
 
 Defines the custom exception classes used by the project.  
 *(This makes pipeline errors clearer and more meaningful than relying only on generic Python exceptions.)*
 
-### `validation.py`
+##### `validation.py`
 
 Contains the input-validation logic. It validates the DataFrame structure, checks required columns, and creates the `validation_errors` column for row-level issues.  
 *(This is the data-quality layer of the project.)*
 
-### `checks.py`
+##### `checks.py`
 
 Contains the business-rule logic. It applies the parameter quality rules and creates the boolean issue flags and the final `has_any_issue` column.  
 *(This is the analytical rules layer of the project.)*
 
-### `pipeline.py`
+##### `pipeline.py`
 
 Contains the main orchestration function, `run_quality_checks(df)`, which connects the full workflow: structural validation, row-level validation, and rule application.  
 *(This is the main public pipeline entry point.)*
 
+
+##### `visualizations.py`
+
+Contains the reusable dashboard visualization functions built on top of the quality-check output. It provides chart builders and summary components, such as KPI cards, heatmaps, scatter plots, bar charts, and acceptable-range charts, all designed to make the classifier results easier to inspect and interpret.
+*(This is the presentation and monitoring layer of the project.)*
 ---    
 
 ## Installation Guide
