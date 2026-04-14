@@ -344,7 +344,7 @@ def compute_summary_metrics(
 
 def build_summary_cards(
     df: pd.DataFrame,
-    title: str = "Resumo geral",
+    title: str = "General summary",
 ) -> go.Figure:
     """
     Build Plotly indicator cards for the MMM quality check dashboard.
@@ -381,10 +381,10 @@ def build_summary_cards(
     )
 
     cards = [
-        ("Total de canais", metrics["total_channels"], "number"),
-        ("Canais com issue", metrics["channels_with_issue"], "number"),
-        ("Erros de validação", metrics["validation_error_count"], "number"),
-        ("% com issue", metrics["pct_channels_with_issue"], "percent"),
+        ("Total of Channels", metrics["total_channels"], "number"),
+        ("Channels with issue", metrics["channels_with_issue"], "number"),
+        ("Validation Errors", metrics["validation_error_count"], "number"),
+        ("% issues", metrics["pct_channels_with_issue"], "percent"),
         ("Low significance", metrics.get(LOW_SIGNIFICANCE_FLAG, 0), "number"),
         ("Suspicious elasticity", metrics.get(SUSPICIOUS_ELASTICITY_FLAG, 0), "number"),
         (
