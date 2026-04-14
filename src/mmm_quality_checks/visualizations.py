@@ -381,12 +381,12 @@ def build_summary_cards(
     )
 
     cards = [
-        ("Total of Channels", metrics["total_channels"], "number"),
-        ("Channels with issue", metrics["channels_with_issue"], "number"),
-        ("Validation Errors", metrics["validation_error_count"], "number"),
+        ("Total\n of\n Channels", metrics["total_channels"], "number"),
+        ("Channels\n with\n issue", metrics["channels_with_issue"], "number"),
+        ("Validation\n Errors", metrics["validation_error_count"], "number"),
         ("% issues", metrics["pct_channels_with_issue"], "percent"),
-        ("Low significance", metrics.get(LOW_SIGNIFICANCE_FLAG, 0), "number"),
-        ("Suspicious elasticity", metrics.get(SUSPICIOUS_ELASTICITY_FLAG, 0), "number"),
+        ("Low\n significance", metrics.get(LOW_SIGNIFICANCE_FLAG, 0), "number"),
+        ("Suspicious\n elasticity", metrics.get(SUSPICIOUS_ELASTICITY_FLAG, 0), "number"),
         (
             "Over-dominant contribution",
             metrics.get(OVER_DOMINANT_CONTRIBUTION_FLAG, 0),
